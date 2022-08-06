@@ -24,7 +24,7 @@ namespace PoupaDev.API.Controllers
         [HttpPost]
         public IActionResult Post(ObjetivoFinanceiroInputModel model)
         {
-            return Ok();
+            return NoContent();
         }
 
         [HttpPost("{id}/operacoes")]
