@@ -30,7 +30,7 @@ namespace PoupaDev.API.Entities
        public List<Operacao> Operacoes { get; private set; }
        public decimal Saldo => ObterSaldo();
  
-       public void RealizarOperacao(Operacao operacao) {
+       public void RealizarOperacaoFinanceira(Operacao operacao) {
            if (operacao.Tipo == TipoOperacao.Saque && Saldo < operacao.Valor)
                throw new SaldoInsuficienteException();
 
